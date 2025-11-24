@@ -1,5 +1,13 @@
 # Presidio anonymizer
 
+# Answers to lab 11 questions
+
+0 if/elif branches are used in the factory to select the operator.
+
+The factory uses a nested dictionary to select the operators instead.
+
+This represents the Strategy design pattern by having the nested dictionary be a registry of strategies and having the operator be selected behind that interface.
+
 ## Description
 
 The Presidio anonymizer is a Python based module for anonymizing detected PII text
