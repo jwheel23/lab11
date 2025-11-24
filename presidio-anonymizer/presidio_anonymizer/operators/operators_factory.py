@@ -1,6 +1,7 @@
 import logging
 from typing import Dict, Type
 
+from presidio_anonymizer.operators.initial import Initial
 from presidio_anonymizer.entities import InvalidParamError
 from presidio_anonymizer.operators import (
     AHDS_AVAILABLE,
@@ -21,7 +22,7 @@ from presidio_anonymizer.operators import (
 logger = logging.getLogger("presidio-anonymizer")
 
 # Predefined operators
-ANONYMIZERS = [Custom, Encrypt, Hash, Keep, Mask, Redact, Replace]
+ANONYMIZERS = [Custom, Encrypt, Hash, Keep, Mask, Redact, Replace, Initial]
 if AHDS_AVAILABLE and AHDSSurrogate:
     ANONYMIZERS.append(AHDSSurrogate)
 
